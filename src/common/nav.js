@@ -20,6 +20,19 @@ export const getNavData = app => [
         path: 'table-list',
         component: dynamicWrapper(app, ['rule'], import('../routes/List/TableList')),
       },
+      {
+        name: '新页面',
+        path: 'newpage',
+        icon: 'file',
+        children: [
+          {
+            name: '页面1',
+            path: 'page1',
+            icon: 'form',
+            component: dynamicWrapper(app, [], import('../routes/NewPage/NewPage.js')),
+          },
+        ],
+      },
     ],
   },
 ];
